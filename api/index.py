@@ -26,6 +26,4 @@ def handle_request():
         response = generate_response(assertion)
         return jsonify({'response': response})
     elif request.method == 'GET':
-        assertion = request.args.get('assertion')
-        response = generate_response(assertion)
-        return jsonify({'response': response})
+        return jsonify({'response': "GET REQUEST RECEIVED"})
