@@ -7,7 +7,7 @@ from flask import Flask, request, jsonify
 
 import os
 os.environ["OPENAI_API_KEY"] = "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"
-os.environ["SERPAPI_API_KEY"] = "684035001579d1e54d72e18206f5e7d46c1a7d30ddf0ee213e7314692b668a5f"
+os.environ["SERPAPI_API_KEY"] = "f15b49da3c7d3b44f53e7c3464742627083a628070e6242d7206c372bde15ec1"
 app = Flask(__name__)
 
 def generate_response(assertion):
