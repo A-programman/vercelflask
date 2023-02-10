@@ -25,6 +25,8 @@ def handle_request():
     if request.method == 'POST':
         assertion = request.json.get('assertion')
         reference = generate_reference(assertion)
-        return jsonify(reference)
+        print("REFERENCE: " + reference)
+        response = generate_response(reference)
+        return jsonify(response)
     elif request.method == 'GET':
         return jsonify({'response': "GET REQUEST RECEIVED"})
