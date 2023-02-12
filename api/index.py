@@ -8,7 +8,7 @@ from langchain.utilities import GoogleSearchAPIWrapper
 
 llm = OpenAI(temperature=0)
 tools = load_tools(["serpapi"], llm=llm)
-agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True, max_iterations=10, early_stopping_method="generate")
+agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True)
 
 
 search = GoogleSearchAPIWrapper()
