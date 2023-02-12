@@ -31,7 +31,7 @@ def handle_request():
         print("REFERENCE: " + reference)
         if reference == "NONE FOUND":
             revision = generate_revision(assertion)
-            return jsonify([{"title": "Revision", "revision": revision}])
+            return jsonify([{"title": "Revision", "snippet": revision}])
         else:
             response = generate_response(reference)
             return jsonify(response)
